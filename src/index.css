@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light;
+  --accent: #35e624;
+  --accent-dark: #188a16;
+  --ink: #172019;
+  --muted: #647064;
+  --surface: #ffffff;
+  --surface-muted: #edf4eb;
+  --page: #f5f8f4;
+  --border: rgb(23 32 25 / 10%);
+  --border-strong: rgb(23 32 25 / 15%);
+  --shadow-card: 0 12px 35px rgb(22 51 24 / 7%);
+  --shadow-card-hover: 0 20px 42px rgb(22 51 24 / 12%);
+  --shadow-hero: 0 24px 70px rgb(22 51 24 / 8%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --accent-dark: #61ed53;
+    --ink: #edf4eb;
+    --muted: #a4b1a2;
+    --surface: #19221a;
+    --surface-muted: #222d23;
+    --page: #101610;
+    --border: rgb(237 244 235 / 12%);
+    --border-strong: rgb(237 244 235 / 20%);
+    --shadow-card: 0 12px 35px rgb(0 0 0 / 20%);
+    --shadow-card-hover: 0 20px 42px rgb(0 0 0 / 32%);
+    --shadow-hero: 0 24px 70px rgb(0 0 0 / 26%);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 92% 6%, rgb(53 230 36 / 9%), transparent 25rem),
+    var(--page);
+  color: var(--ink);
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+body,
+button,
+a {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  color: #10220e;
+  background: rgb(53 230 36 / 35%);
+}

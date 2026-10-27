@@ -1,0 +1,228 @@
+.site-navbar {
+  padding: 0.9rem 0;
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+}
+
+.site-navbar .navbar-brand {
+  color: var(--ink);
+  font-size: 1.15rem;
+  letter-spacing: -0.04em;
+}
+
+.site-navbar.navbar-light .navbar-nav .nav-link {
+  margin-left: 0.45rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 600;
+  transition: color 160ms ease;
+}
+
+.site-navbar.navbar-light .navbar-nav .nav-link:hover,
+.site-navbar.navbar-light .navbar-nav .nav-link:focus {
+  color: var(--accent-dark);
+}
+
+.site-navbar .navbar-toggler {
+  border-color: var(--border-strong);
+}
+
+.text-muted {
+  color: var(--muted) !important;
+}
+
+.site-main {
+  max-width: 1140px;
+}
+
+.hero-section {
+  padding-top: 1.25rem;
+}
+
+.hero-card {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(ellipse at 0% 100%, rgb(53 230 36 / 11%), transparent 34rem),
+    var(--surface);
+  box-shadow: var(--shadow-hero);
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 390px;
+  object-fit: cover;
+  object-position: center 35%;
+  border: 5px solid var(--surface);
+  box-shadow: 0 12px 32px rgb(22 51 24 / 15%);
+}
+
+.hero-card h1 {
+  max-width: 650px;
+  font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+  letter-spacing: -0.055em;
+  line-height: 1.12;
+}
+
+.hero-card .lead {
+  color: var(--accent-dark);
+}
+
+.hero-card p:not(.lead) {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.hero-card .blockquote {
+  border-color: var(--border) !important;
+}
+
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  color: var(--accent-dark);
+  letter-spacing: 0.13em;
+}
+
+#habilidades,
+#projetos {
+  scroll-margin-top: 6rem;
+}
+
+#habilidades h2,
+#projetos h2,
+.site-footer h2 {
+  color: var(--ink);
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  letter-spacing: -0.05em;
+}
+
+.tech-pill {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  box-shadow: 0 3px 12px rgb(22 51 24 / 4%);
+}
+
+.project-card {
+  overflow: hidden;
+  border-radius: 1.1rem;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.project-card .card-img-top {
+  height: 210px;
+  object-fit: cover;
+  background: var(--surface-muted);
+}
+
+.project-card .card-body {
+  padding: 1.25rem;
+}
+
+.project-card .card-title {
+  color: var(--ink);
+  letter-spacing: -0.025em;
+}
+
+.project-card .card-text {
+  color: var(--muted) !important;
+  line-height: 1.65;
+}
+
+.project-image-placeholder {
+  background: var(--surface-muted);
+  color: var(--muted);
+}
+
+.project-link,
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.75rem;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.project-link {
+  width: 100%;
+}
+
+.contact-link {
+  width: 150px;
+  justify-content: center;
+}
+
+.project-link:hover,
+.project-link:focus,
+.contact-link:hover,
+.contact-link:focus {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #10220e;
+}
+
+.site-footer {
+  margin-top: 5rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface-muted);
+}
+
+.contact-link ion-icon {
+  font-size: 1.15rem;
+}
+
+.project-link:focus-visible,
+.contact-link:focus-visible {
+  outline: 3px solid rgb(24 138 22 / 35%);
+  outline-offset: 3px;
+}
+
+@media (max-width: 767.98px) {
+  .site-main {
+    margin-top: 1.5rem !important;
+  }
+
+  .hero-image {
+    max-height: 320px;
+  }
+
+  .site-footer {
+    margin-top: 3rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .site-navbar .navbar-toggler-icon {
+    filter: invert(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
